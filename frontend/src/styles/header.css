@@ -1,0 +1,170 @@
+/* src/styles/header.css */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #009688; /* teal */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-family: system-ui, sans-serif;
+}
+
+.header__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.header__date {
+  font-size: 0.95rem;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.header__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #111;
+  cursor: pointer;
+}
+
+/* --- Search box --- */
+.header__search {
+  position: relative;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0 0.75rem;
+  color: #333;
+}
+
+.header__search svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  color: #666;
+}
+
+.header__search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+}
+
+.header__clear {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.header__clear:hover {
+  color: #000;
+}
+
+/* --- Dropdown panel --- */
+.header__panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 350px;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 6px;
+  margin-top: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  padding: 0.5rem 0;
+}
+
+/* Section headings */
+.hdr-section {
+  padding: 0.25rem 0.75rem;
+}
+
+.hdr-section__title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+/* Suggestion & link list */
+.hdr-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hdr-item {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.hdr-item:hover {
+  background: #f5f5f5;
+}
+
+.hdr-item--phrase {
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.hdr-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.hdr-item__title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111;
+}
+
+.hdr-item__source {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 2px;
+}
+
+/* Empty state / errors */
+.hdr-empty {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.hdr-error {
+  padding: 0.5rem 0.75rem;
+  color: #b00020;
+  font-size: 0.85rem;
+}
+
+/* Spinner inline */
+.hdr-spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #ccc;
+  border-top-color: #00897b;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin-left: 6px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

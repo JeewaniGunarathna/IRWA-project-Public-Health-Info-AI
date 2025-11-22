@@ -1,0 +1,122 @@
+/* ===== Chat Page ===== */
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chat__bubble {
+  font-size: 22px;
+}
+
+.chat__panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Messages container */
+.chat__list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Empty state */
+.chat__empty {
+  text-align: center;
+  margin-top: 80px;
+  color: #6b7280;
+}
+.chat__empty-emoji {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+.chat__empty-head {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.chat__empty-body {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* Chat messages */
+.chat__msg {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* User (right side, blue) */
+.chat__msg--user {
+  align-self: flex-end;
+  background: #009688;
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+/* Agent (left side, gray) */
+.chat__msg--agent {
+  align-self: flex-start;
+  background: #e5e7eb;
+  color: #111827;
+  border-bottom-left-radius: 4px;
+}
+
+/* Composer */
+.chat__composer {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #e5e7eb;
+  background: #fff;
+}
+.chat__input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 9999px;
+  font-size: 15px;
+  outline: none;
+}
+.chat__input:focus {
+  border-color: #009688;
+}
+.chat__send {
+  margin-left: 8px;
+  padding: 0 16px;
+  background: #009688;
+  border: none;
+  border-radius: 9999px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.chat__send:disabled {
+  background: #009688;
+  cursor: not-allowed;
+}
+.chat__send:hover:not(:disabled) {
+  background: #08786F;
+}
