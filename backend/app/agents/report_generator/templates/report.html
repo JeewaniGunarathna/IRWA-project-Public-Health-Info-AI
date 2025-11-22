@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="../../static/css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      <span class="badge">Public Health Info AI</span>
+    </div>
+
+    <h1>{{ title }}</h1>
+    <div class="meta">Period: {{ period }} • Generated at {{ generated_at }}</div>
+
+    <div class="card">
+      <h3>Summary</h3>
+      <p>{{ summary }}</p>
+    </div>
+
+    {% if chart_path %}
+    <div class="card">
+      <h3>Trend</h3>
+      <img class="chart" src="../charts/{{ chart_path.split('/')[-1] }}" alt="Trend chart" />
+    </div>
+    {% endif %}
+
+    <div class="card">
+      <h3>Sources</h3>
+      <ul>
+        {% for s in sources %}
+          <li><a href="{{ s.url }}">{{ s.name }}</a>{% if s.date %} ({{ s.date }}){% endif %}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="footer">Disclaimer: {{ disclaimer }}</div>
+  </div>
+</body>
+
+</html>
